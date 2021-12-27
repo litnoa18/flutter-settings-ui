@@ -99,7 +99,7 @@ class CupertinoSettingsItemState extends State<CupertinoSettingsItem> {
       child: const SizedBox.shrink(),
     );
 
-    final ListTileTheme tileTheme = listTileThemes ?? ListTileTheme.of(context);
+    final tileTheme = listTileThemes ?? ListTileTheme.of(context);
 
     final iconThemeData = IconThemeData(
       color: widget.enabled
@@ -341,7 +341,7 @@ class CupertinoSettingsItemState extends State<CupertinoSettingsItem> {
               ? iosPressedTileColorDark
               : iosTileDarkColor;
 
-  Color? _iconColor(ThemeData theme, ListTileTheme tileTheme) {
+  Color? _iconColor(ThemeData theme, ListTileThemeData tileTheme) {
     // if (tileTheme.selectedColor != null) {
     //   return tileTheme.selectedColor;
     // }
